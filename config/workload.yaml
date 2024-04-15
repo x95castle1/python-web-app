@@ -7,6 +7,10 @@ metadata:
     apps.tanzu.vmware.com/has-tests: "true"
     app.kubernetes.io/part-of: python-web-app
 spec:
+  build:
+    env:
+      - name: BP_CPYTHON_VERSION
+        value: "3.6.10"
   params:
   - name: annotations
     value:
